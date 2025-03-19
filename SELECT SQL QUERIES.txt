@@ -1,0 +1,47 @@
+1) SELECT event_type, COUNT(*) AS interest_count
+   FROM member_events
+   GROUP BY event_type ORDER BY interest_count DESC;
+
+2) SELECT event_id, event name,
+          (attendance_count * 100.0 / capacity) AS attendance_rate
+   FROM events
+   ORDER BY attendance_rate DESC
+   LIMIT 5;
+
+3) SELECT DAYNAME(event_date) AS day_of week,
+          COUNT(member_id) AS total_attendance
+   FROM member_attendance
+   GROUP BY day_of_week
+   ORDER BY total_attendance DESC;
+
+4) SELECT AVG(pre_membership_engagements) AS avg_engagements
+   FROM digital_engagements
+   WHERE conversion_to_membership = 1;
+
+5) SELECT CASE
+              WHEN DAYOFWEEK(usage_date) IN (1, 7) THEN 'Weekend'
+              ELSE 'Weekday'
+          END AS period,
+          AVG(activity_count) AS avg_activity
+   FROM member_usage
+   GROUP BY period;
+
+6) SELECT HOUR(activity_time) AS hour_of_day,
+          COUNT(*) AS total_activity
+   FROM member_activity
+  GROUP BY hour_of_day
+  ORDER BY total_activity DESC
+  LIMIT 5;
+
+7) SELECT member_id, tag, COUNT(*) AS tag_count
+   FROM member_interests
+   GROUP BY member_id, tag
+   ORDER BY member_id, tag_count DESC;
+
+8) SELECT reason, COUNT(*) AS unsubscribe_count
+   FROM member_unsubscriptions
+   GROUP BY reason
+   ORDER BY unsubscribe_count DESC;
+
+
+

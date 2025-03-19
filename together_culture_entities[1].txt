@@ -1,0 +1,127 @@
+ 1. **Member**
+- **Attributes**:
+  - MemberID (Primary Key)
+  - Name
+  - Email
+  - Phone
+  - MembershipType
+  - StartDate
+  - ExpiryDate
+  - PaymentStatus
+  - EngagementScore
+  - LastVisit
+  - PreferredTags
+  - AlertStatus
+
+### 2. **NonMember**
+- **Attributes**:
+  - NonMemberID (Primary Key)
+  - Name
+  - Email
+  - Phone
+  - EngagementScore
+  - PreferredTags
+  - ConversionStatus
+
+### 3. **AttendanceLog**
+- **Attributes**:
+  - AttendanceID (Primary Key)
+  - MemberID (Foreign Key)
+  - VisitDate
+  - CheckInTime
+  - CheckOutTime
+  - DayOfWeek
+  - Season
+
+### 4. **EventParticipation**
+- **Attributes**:
+  - ParticipationID (Primary Key)
+  - MemberID (Foreign Key)
+  - EventID (Foreign Key)
+  - ParticipationDate
+  - EngagementLevel
+  - Segment
+
+### 5. **Event**
+- **Attributes**:
+  - EventID (Primary Key)
+  - EventName
+  - EventDate
+  - Duration
+  - Capacity
+  - Description
+
+### 6. **EventTags**
+- **Attributes**:
+  - TagID (Primary Key)
+  - TagName
+  - EventID (Foreign Key)
+
+### 7. **MemberInterestTags**
+- **Attributes**:
+  - InterestTagID (Primary Key)
+  - MemberID (Foreign Key)
+  - TagID (Foreign Key)
+
+### 8. **SpaceUtilization**
+- **Attributes**:
+  - UtilizationID (Primary Key)
+  - SpaceID (Foreign Key)
+  - Date
+  - TimeSlot
+  - CapacityUsed
+  - MaxCapacity
+  - SpaceType
+  - UtilizationPattern
+
+### 9. **EngagementLog**
+- **Attributes**:
+  - EngagementID (Primary Key)
+  - UserID (Foreign Key to Member or NonMember)
+  - EngagementDate
+  - EngagementType
+  - ConversionStatus
+
+### 10. **Survey**
+- **Attributes**:
+  - SurveyID (Primary Key)
+  - PersonID (Foreign Key to Member or NonMember)
+  - Feedback
+  - DateSubmitted
+  - Rating
+  - Department
+
+### 11. **Alerts**
+- **Attributes**:
+  - AlertID (Primary Key)
+  - MemberID (Foreign Key)
+  - AlertType
+  - AlertDate
+  - ResolvedStatus
+
+### 12. **CRM**
+- **Attributes**:
+  - CRMID (Primary Key)
+  - MemberID (Foreign Key)
+  - EngagementLogID (Foreign Key)
+  - CampaignSuccessRate
+
+### 13. **Payment**
+- **Attributes**:
+  - PaymentID (Primary Key)
+  - MemberID (Foreign Key)
+  - Amount
+  - PaymentDate
+  - PaymentMethod (e.g., credit card, cash, etc.)
+  - PaymentStatus (e.g., completed, pending, failed)
+  - InvoiceID (Foreign Key, if applicable)
+
+### 14. **Registration**
+- **Attributes**:
+  - RegistrationID (Primary Key)
+  - UserID (Foreign Key to Member or NonMember)
+  - RegistrationDate
+  - RegistrationSource
+  - Status
+  - Feedback
+  - ConversionDate

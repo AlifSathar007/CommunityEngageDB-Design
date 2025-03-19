@@ -1,0 +1,76 @@
+##List Members and Their Membership Expiry Dates##
+SELECT 
+    `First Name`,
+    `Last Name`,
+    `Email`,
+    `Membership Status`,
+    `Expiry date`
+FROM 
+    `Hubspot CRM`
+WHERE 
+    `Membership Status` = 'Founding Member'
+ORDER BY 
+    `Expiry date` DESC;
+*Purpose: Retrieve a list of founding members and their membership expiry dates, sorted by the most recent expiration*
+
+##Show Visitors Who Checked in Using QR##
+SELECT 
+    `Name`, 
+    `Email`, 
+    `Check-In Type`, 
+    `Check-Out`
+FROM 
+    `Visitor Sign-in`
+WHERE 
+    `Check-In Type` = 'qr';
+*Purpose: Extract details of visitors who checked in via QR code*
+
+##Find Events That Had Public Tickets Available##
+SELECT 
+    `Event Name`, 
+    `Ticket Type`, 
+    `Ticket Price`
+FROM 
+    `Eventbrite`
+WHERE 
+    `Ticket Type` = 'Public ticket'
+ORDER BY 
+    `Ticket Price` DESC;
+*Purpose: List events with public ticket options, sorted by ticket price in descending order*
+
+##Count Total Visitors by Date##
+SELECT 
+    DATE(`#`) AS VisitDate, 
+    COUNT(*) AS TotalVisitors
+FROM 
+    `Visitor Sign-in`
+GROUP BY 
+    VisitDate
+ORDER BY 
+    VisitDate ASC;
+*Purpose: Provide a count of visitors for each day*
+
+##List Unsubscribed Members and Their Reasons##
+SELECT 
+    `Email Address`, 
+    `UNSUB_REASON`, 
+    `UNSUB_CAMPAIGN_TITLE`
+FROM 
+    `Mailchimp Unsubscribed`
+WHERE 
+    `UNSUB_REASON` IS NOT NULL
+ORDER BY 
+    `UNSUB_TIME` DESC;
+*Purpose: Display unsubscribed members and their reasons, sorted by the most recent unsubscription*
+
+##Find the Total Revenue from Paid Tickets##
+SELECT 
+    SUM(`Ticket Price`) AS TotalRevenue
+FROM 
+    `Eventbrite`
+WHERE 
+    `Ticket Price` > 0;
+*Purpose: Calculate the total revenue generated from paid tickets*
+
+
+
