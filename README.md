@@ -60,9 +60,6 @@ git clone https://github.com/YourUsername/your-repo-name.git
 - **Muhammed Aseem** - Admin Dashboard, Authentication System
 - **Niroshan Kekulawala** - Member Management, User Role Implementation
 
-## **📜 License**
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
 ## **📧 Contact**
 For questions or contributions, reach out via:
 - 📩 Email: alifsatharofficial2003@gmail.com
@@ -71,3 +68,8 @@ For questions or contributions, reach out via:
 ---
 
 🚀 **If you find this project helpful, don't forget to ⭐ star the repository!**
+## License
+
+This project is **not open-source** and is protected under a **custom all-rights-reserved license**.  
+Unauthorized use, copying, or distribution is strictly prohibited. See [LICENSE.txt](LICENSE.txt) for details.
+
