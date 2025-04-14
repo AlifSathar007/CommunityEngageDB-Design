@@ -63,7 +63,6 @@ git clone https://github.com/YourUsername/your-repo-name.git
 ## **📧 Contact**
 For questions or contributions, reach out via:
 - 📩 Email: alifsatharofficial2003@gmail.com
-- 🖥 GitHub: [AlifSathar007](https://github.com/AlifSathar007)
 
 ---
 
