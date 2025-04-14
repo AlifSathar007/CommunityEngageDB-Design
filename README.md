@@ -34,7 +34,7 @@ This project is a **Customer Relationship Management (CRM) software** developed 
 ## **🚀 Installation Guide**
 1️⃣ **Clone the Repository:**
 ```sh
-git clone https://github.com/YourUsername/your-repo-name.git
+[https://github.com/QuantumAlchemist03/CommunityEngageDB-Design.git]
 ```
 2️⃣ **Set Up the Database:**
 - Import the MySQL database schema (`database.sql`).
